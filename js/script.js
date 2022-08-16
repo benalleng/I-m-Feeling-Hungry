@@ -3,18 +3,14 @@ const RECIPE_URL = 'https://api.edamam.com/api/recipes/v2?type=public';
 const API_ID = '102baf10';
 const API_KEY = '4f61dc9d759dcaa5d4579250c1e2e3d9';
 const $input = $('input[type="text"]');
+const $main = $('main')
 let $button = $('button');
+
+// states
 let hungers = [];
 let excluded = [];
 let healths = [];
 let cuisines = [];
-// let q = '';
-// let diet = '';
-// let cuisineType = '';
-// let mealType = '';
-// let dishType = '';
-// let excluded = [''];
-// states
 
 // cached element references
 
@@ -32,56 +28,50 @@ $(document).on('click', '#skip', function() {
   hungers.push('');
   inputChanger();
 })
+$(document).on('click', '#refresh', function() {
+  location.reload();
+});
 
 
 // functions
-      function handleEnterPress(event) {
-        if (event.keyCode === 13) {
-          handleTextInput(event);
-        }
-      }
+function handleEnterPress(event) {
+  if (event.keyCode === 13) {
+    handleTextInput(event);
+  }
+}
       
-      function handleTextInput(event) {
-        event && event.preventDefault();
-        
-        const want = $input.val();
-        
-        if(!want) return;
-        
-        $input.focus();
-        console.log(want);
-                  
-        hungers.push($input.val());
-                  
-        $input.val('');
-                  
-        console.log(hungers);
-                  
-        inputChanger();
-      }
+function handleTextInput(event) {
+  event && event.preventDefault();
+  const want = $input.val();     
+  if(!want) return;     
+  $input.focus();
+  console.log(want);              
+  hungers.push($input.val());
+  $input.val('');
+  console.log(hungers);
+  inputChanger();
+}
                 
 function inputChanger() {
   let $submitButton = $('<input type="button" id="submit" value="Get Recipe" />');
   let $skipButton = $('<input type="button" id="skip" value="Skip" />');
-  
-  if (hungers.length == 0) {
-        $('input:text').attr('placeholder','Hungry');
+    if (hungers.length == 0) {
+      $('input:text').attr('placeholdeconst R = ~~(Math.random() * (19 - 1));r','Hungry');
     } else if (hungers.length == 1) {
-        $('input:text').attr('placeholder','Italian');
-        $skipButton.appendTo($("main"));
+      $('input:text').attr('placeholder','Italian');
+      $skipButton.appendTo($("main"));
     } else if (hungers.length == 2) {
-        $('input:text').attr('placeholder','Vegetarian');
+      $('input:text').attr('placeholder','Vegetarian');
     } else if (hungers.length == 3) {
-        $('input:text').attr('placeholder','Brussel Sprouts YUCK!');
-        $submitButton.appendTo($("main"));
-        $("main").find('#skip').remove();
+      $('input:text').attr('placeholder','Brussel Sprouts YUCK!');
+      $submitButton.appendTo($("main"));
+      $("main").find('#skip').remove();
     } else {
-    return;
-  }
+      return;
+    }
 }
 
 function AJAXPush() {
-  // excludedJoin = 
   let cuisine = cuisines.map(function(location) {
     if (location == '') {
       return;
@@ -109,6 +99,7 @@ function AJAXPush() {
     promise.then(
     (data) => {
         console.log(data);
+        render(data);
         },
     (error) => {
       console.log('bad request: ', error);
@@ -119,6 +110,29 @@ Try another combination.`);
   );
 }
 
+function render(recipeData) {
+  let arraylen = recipeData.hits.length;
+  let $refreshButton = $('<input type="button" id="refresh" value="New Recipe" />');
+
+  const R = ~~(Math.random() * (recipeData.hits.length - 1));
+
+  if(arraylen == 0) {
+    alert(`Oops! Looks like the Kitchen is all out! 
+Try another combination.`);
+    location.reload();
+  } else {
+    $main.html(`
+  <h3 class="recipeLabel">${recipeData.hits[R].recipe.label}</h3>
+  <img src="${recipeData.hits[R].recipe.image}">
+  <p>Ingredients: <br>
+  - ${recipeData.hits[R].recipe.ingredientLines.join(`<br> -
+  `)}</p>
+  <p>Source: <a href="${recipeData.hits[R].recipe.url}" target="blank">${recipeData.hits[R].recipe.label}</a></p>
+  `);
+  $refreshButton.appendTo($("main"))
+  console.log(R);
+  }
+}
 
 
 
