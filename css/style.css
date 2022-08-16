@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Helvetica;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #d9d9d9;
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    background-color: #d9d9d9;
+}
+input[type=text] {
+    background-color: white;
+    border: none;
+    color: black;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 40px;
+    margin: 4px 2px;
+    box-sizing: border-box;
+    width: 22rem;
+    border-radius: 8px;
+
+}
+
+input[type=button] {
+    background-color: #4ce96f;
+    border: none;
+    color: white;
+    font-family: Helvetica;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: end;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.Feeling {
+    color: green;
+}
+
+.Default {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 40px;   
+}
