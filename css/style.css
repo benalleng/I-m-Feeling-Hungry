@@ -16,6 +16,10 @@ header {
     background-color: #d9d9d9;
 }
 
+main {
+    
+}
+
 footer {
     display: flex;
     position: absolute;
@@ -58,4 +62,20 @@ input[type=button] {
 .Default {
     font-family: 'Gochi Hand', cursive;
     font-size: 40px;   
+}
+.Not {
+    font-family: 'Gochi Hand', cursive;
+    color: red;
+    font-size: 3rem;
+}
+
+.wantList {
+    font-family: 'Gochi Hand', cursive;;
+    color: green;
+}
+
+.notWantList {
+    color: red;
+    text-decoration: line-through;
+    font-family: 'Gochi Hand', cursive;;
 }
