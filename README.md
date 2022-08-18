@@ -19,13 +19,13 @@ ____________
 ## Screenshots
 
 ### Initial Page
-[Initial](https://imgur.com/ysjB5fZ)
+![Initial](https://imgur.com/ysjB5fZ)
 
 ### Form Page
-[Form](https://imgur.com/KX1iKdh)
+![Form](https://imgur.com/KX1iKdh)
 
 ### Final Page
-[Final](https://imgur.com/7xHz1SQ)
+![Final](https://imgur.com/7xHz1SQ)
 
 ## Geting started
 
