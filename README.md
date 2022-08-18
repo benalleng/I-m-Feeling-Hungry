@@ -6,7 +6,7 @@
 
 - present each input back to the user to give them a visual representation of how the API will find their recipe
 
-inspired by the Google I'm Feeling Lucky button
+- inspired by the Google I'm Feeling Lucky button
 
 ____________ 
 
@@ -17,6 +17,15 @@ ____________
 - HTML, CSS
 
 ## Screenshots
+
+### Initial Page
+[Initial](assets/Screenshot_2022-08-18_13-55-37.png)
+
+### Form Page
+[Form](assets/Screenshot_2022-08-18_14-00-12.png)
+
+### Final Page
+[Final](assets/Screenshot_2022-08-18_13-58-18.png)
 
 ## Geting started
 
