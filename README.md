@@ -25,7 +25,7 @@ ____________
 ![Form](./assets/Screenshot_2022-08-18_14-00-12.png)
 
 ### Final Page
-![Final](./assets/Screenshot_2022-08-18_14-00-12.png)
+![Final](assets/Screenshot_2022-08-18_13-58-18.png)
 
 ## Geting started
 
