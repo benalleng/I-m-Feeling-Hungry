@@ -58,16 +58,16 @@ function inputChanger() {
   let $submitButton = $('<input type="button" id="submit" value="Get Recipe" />');
   let $skipButton = $('<input type="button" id="skip" value="Skip" />');
     if (hungers.length == 0) {
-      $('input:text').attr('placeholder','Hungry');
+      $('input:text').attr('placeholder','Hungry!');
     } else if (hungers.length == 1) {
-      $('input:text').attr('placeholder','Italian');
+      $('input:text').attr('placeholder','Italian!');
       $('br').appendTo($("main"));
       $skipButton.appendTo($("main"));
     } else if (hungers.length == 2) {
-      $('input:text').attr('placeholder','Vegetarian');
+      $('input:text').attr('placeholder','Vegetarian!');
     } else if (hungers.length == 3) {
-      $('input:text').attr('placeholder','Brussel Sprouts YUCK!');
-      $('span').text('Not ')
+      $('input:text').attr('placeholder','Brussel Sprouts, YUCK!');
+      $('.Not').text('Not ')
       $submitButton.appendTo($("main"));
       $("main").find('#skip').remove();
     } else {
@@ -119,19 +119,22 @@ function render(recipeData) {
 Try another combination.`);
     location.reload();
   } else {
+    $main.addClass('output')
     $main.html(`
   <h3 class="recipeLabel">${recipeData.hits[R].recipe.label}</h3>
-  <img src="${recipeData.hits[R].recipe.image}">
-  <p>Ingredients: <br>
+  <img class="foodPic" src="${recipeData.hits[R].recipe.image}">
+  <p class="instruction"><span id="ingredients" class="labelList">Ingredients:</span> <br>
   - ${recipeData.hits[R].recipe.ingredientLines.join(`<br> -
   `)}</p>
-  <p>Source: <a href="${recipeData.hits[R].recipe.url}" target="blank">${recipeData.hits[R].recipe.label}</a></p>
+  <p class="instruction"><span id="source" class="labelList">Source:</span> <a href="${recipeData.hits[R].recipe.url}" target="blank">${recipeData.hits[R].recipe.label}</a></p>
   `);
   $refreshButton.appendTo($("main"))
   }
 }
 
-
+// function uriInputFormatter() {
+//   let uriInput = 
+// }
 
 
 
