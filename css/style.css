@@ -56,7 +56,6 @@ input[type=text] {
     width: 22rem;
     border-radius: 8px;
     height: max-content;
-
 }
 
 input[type=button] {
@@ -128,11 +127,24 @@ input[type=button] {
 
 @media only screen and (min-width: 1000px) {
 
-    main {
+    .output {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 1200px;
+        max-width: 975px;
+    }
+
+    input[type=text] {
+        background-color: white;
+        border: none;
+        color: #304763;
+        font-family: 'Gochi Hand', cursive;
+        font-size: 40px;
+        margin: 15px 15px;
+        box-sizing: border-box;
+        width: 22rem;
+        border-radius: 8px;
+        height: max-content;
     }
 
     .recipeLabel {
@@ -141,6 +153,7 @@ input[type=button] {
         font-size: 2.5rem;
         margin: 15px 0px 10px 0px;
         height: max-content;
+        min-width: 625px;
     }
 
     .foodPic {
@@ -159,5 +172,13 @@ input[type=button] {
         color: #304736;
         font-family: 'Gochi Hand', cursive;
         font-size: 1.5rem;
+    }
+
+    #source {
+        min-width: 200px;
+    }
+
+    #ingredients {
+        min-width: 275px;
     }
   }
