@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: Helvetica;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+header {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #9d9d9d;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #b38978;
+    padding: 0px 10px 10% 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 10%;
+    margin-bottom: 15%;
+    max-width: 500px;
+    min-width: 350px;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    background-color: #9d9d9d;
+    color: #3c5944;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    font-size: 0.9rem;
+    min-height: 50px;
+    height:auto !important;
+    height: 50px;
+}
+input[type=text] {
+    background-color: white;
+    border: none;
+    color: #304763;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 40px;
+    margin: 10px 2px;
+    box-sizing: border-box;
+    width: 22rem;
+    border-radius: 8px;
+    height: max-content;
+}
+
+input[type=button] {
+    background-color: #78b389;
+    border: none;
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-align: end;
+    text-decoration: none;
+    display: inline-block;
+    width: max-content;
+    height: max-content;
+    margin: 10px
+}
+
+.Feeling {
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    
+}
+
+.Default {
+    font-family: 'Gochi Hand', cursive;
+    font-size: 40px;   
+}
+.Not {
+    font-family: 'Gochi Hand', cursive;
+    color: red;
+    font-size: 3rem;
+}
+
+.wantList {
+    font-family: 'Gochi Hand', cursive;
+    color: #3c5944;
+    font-size: 20px;
+}
+
+.notWantList {
+    color: red;
+    text-decoration: line-through;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
+}
+
+.recipeLabel {
+    color: #304736;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.5rem;
+    margin: 15px 0px 10px 0px;
+}
+
+.labelList {
+    color: #304736;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.5rem;
+}
+
+.emoji {
+    font-size: 1.2rem;
+}
+
+.foodPic {
+    margin: 0px 20px 0 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .output {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 975px;
+    }
+
+    input[type=text] {
+        background-color: white;
+        border: none;
+        color: #304763;
+        font-family: 'Gochi Hand', cursive;
+        font-size: 40px;
+        margin: 15px 15px;
+        box-sizing: border-box;
+        width: 22rem;
+        border-radius: 8px;
+        height: max-content;
+    }
+
+    .recipeLabel {
+        color: #304736;
+        font-family: 'Alfa Slab One', cursive;
+        font-size: 2.5rem;
+        margin: 15px 0px 10px 0px;
+        height: max-content;
+        min-width: 625px;
+    }
+
+    .foodPic {
+        display: block;
+        justify-content: end;
+        align-items: flex-end;
+        margin: 20px;
+        max-height: 300px;
+        
+    }
+
+    .labelList {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        color: #304736;
+        font-family: 'Gochi Hand', cursive;
+        font-size: 1.5rem;
+    }
+
+    #source {
+        min-width: 200px;
+    }
+
+    #ingredients {
+        min-width: 275px;
+    }
+  }
