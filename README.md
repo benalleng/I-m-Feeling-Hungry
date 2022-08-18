@@ -19,13 +19,13 @@ ____________
 ## Screenshots
 
 ### Initial Page
-[Initial](assets/Screenshot_2022-08-18_13-55-37.png)
+[Initial](https://imgur.com/ysjB5fZ)
 
 ### Form Page
-[Form](assets/Screenshot_2022-08-18_14-00-12.png)
+[Form](https://imgur.com/KX1iKdh)
 
 ### Final Page
-[Final](assets/Screenshot_2022-08-18_13-58-18.png)
+[Final](https://imgur.com/7xHz1SQ)
 
 ## Geting started
 
