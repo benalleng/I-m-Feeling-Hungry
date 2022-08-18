@@ -10,42 +10,61 @@ body {
 }
 
 header {
+    height: 50px;
     position: absolute;
     top: 0;
     width: 100%;
-    background-color: #d9d9d9;
+    background-color: #9d9d9d;
 }
 
 main {
-    
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #b38978;
+    padding: 0px 10px 10% 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 10%;
+    margin-bottom: 15%;
+    max-width: 500px;
+    min-width: 350px;
 }
 
 footer {
-    display: flex;
-    position: absolute;
+    position: fixed;
+    height: 50px;
     bottom: 0;
     width: 100%;
-    height: 5%;
-    background-color: #d9d9d9;
+    background-color: #9d9d9d;
+    color: #3c5944;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    font-size: 0.9rem;
+    min-height: 50px;
+    height:auto !important;
+    height: 50px;
 }
 input[type=text] {
     background-color: white;
     border: none;
-    color: black;
+    color: #304763;
     font-family: 'Gochi Hand', cursive;
     font-size: 40px;
-    margin: 4px 2px;
+    margin: 10px 2px;
     box-sizing: border-box;
     width: 22rem;
     border-radius: 8px;
+    height: max-content;
 
 }
 
 input[type=button] {
-    background-color: #4ce96f;
+    background-color: #78b389;
     border: none;
     color: white;
-    font-family: Helvetica;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
     font-size: 30px;
     cursor: pointer;
     padding: 5px 10px;
@@ -53,10 +72,16 @@ input[type=button] {
     text-align: end;
     text-decoration: none;
     display: inline-block;
+    width: max-content;
+    height: max-content;
+    margin: 10px
 }
 
 .Feeling {
-    color: green;
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    
 }
 
 .Default {
@@ -70,12 +95,69 @@ input[type=button] {
 }
 
 .wantList {
-    font-family: 'Gochi Hand', cursive;;
-    color: green;
+    font-family: 'Gochi Hand', cursive;
+    color: #3c5944;
 }
 
 .notWantList {
     color: red;
     text-decoration: line-through;
-    font-family: 'Gochi Hand', cursive;;
+    font-family: 'Gochi Hand', cursive;
 }
+
+.recipeLabel {
+    color: #304736;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 2.5rem;
+    margin: 15px 0px 10px 0px;
+}
+
+.labelList {
+    color: #304736;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.5rem;
+}
+
+.emoji {
+    font-size: 1.2rem;
+}
+
+.foodPic {
+    margin: 0px 20px 0 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1200px;
+    }
+
+    .recipeLabel {
+        color: #304736;
+        font-family: 'Alfa Slab One', cursive;
+        font-size: 2.5rem;
+        margin: 15px 0px 10px 0px;
+        height: max-content;
+    }
+
+    .foodPic {
+        display: block;
+        justify-content: end;
+        align-items: flex-end;
+        margin: 20px;
+        max-height: 300px;
+        
+    }
+
+    .labelList {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        color: #304736;
+        font-family: 'Gochi Hand', cursive;
+        font-size: 1.5rem;
+    }
+  }
