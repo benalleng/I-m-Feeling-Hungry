@@ -96,12 +96,14 @@ input[type=button] {
 .wantList {
     font-family: 'Gochi Hand', cursive;
     color: #3c5944;
+    font-size: 20px;
 }
 
 .notWantList {
     color: red;
     text-decoration: line-through;
     font-family: 'Gochi Hand', cursive;
+    font-size: 20px;
 }
 
 .recipeLabel {
