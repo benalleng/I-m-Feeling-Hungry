@@ -5,10 +5,30 @@
 - use sequenced inputs with different questions all starting with I'm Feeling 
 
 - present each input back to the user to give them a visual representation of how the API will find their recipe
-____________ 
 
 inspired by the Google I'm Feeling Lucky button
 
+____________ 
+
+## Technologies Used
+
+- Javascript, JQuery
+
+- HTML, CSS
+
+## Screenshots
+
+## Geting started
+
+ - Type what kind of food you want to have then list the foods that you don't want to have!
+
+## Future Enhancements
+
+- Move the diet restrictions to tabs at the top of the page to give the user a clearer indication of what to type 
+
+- Find a way to add previous searches to local storage to add a history function.
+
+- Further expansion of the 
 
 ###### Pseudo-coding
 
