@@ -131,11 +131,3 @@ Try another combination.`);
   $refreshButton.appendTo($("main"))
   }
 }
-
-// function uriInputFormatter() {
-//   let uriInput = 
-// }
-
-
-
-
